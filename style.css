@@ -14,7 +14,6 @@
 }
 
 body{
-    background-color:var(--gunmetal);
     color: aliceblue;
 
 }
@@ -33,11 +32,14 @@ body{
 }
 
 .logo{
+    position: relative;
     font-size: 25px;
     color: aliceblue;
     text-decoration: none;
     font-weight: 600;
 }
+
+
 
 .navbar a{
     font-size: 18px;
@@ -56,6 +58,9 @@ body{
 
 .home {
     height: 100vh;
+    background: url(img/home.png) no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -67,19 +72,27 @@ body{
 }
 
 .home-content h1 {
+    position: relative;
     font-size: 56px;
     font-weight: 700;
+    line-height: 1.2;
 }
 
+
 .home-content h3{
+    position: relative;
     font-size: 32px;
     font-weight: 700;
     color: var(--light-sea-green);
 }
 
+
 .home-content p{
-    font-size: 16px;
+    position: relative;
+    font-size: 17px;
+    margin: 20px 0 40px;
 }
+
 
 .home-content .btn-box {
     display: flex;
@@ -88,18 +101,145 @@ body{
     height: 50px;
 }
 
+
 .btn-box a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 150px;
     height: 100%;
-    background: #00a9a5ff;
-    border: 2px solid #00a9a5ff;
+    background: var(--light-sea-green);
+    border: 2px solid var(--light-sea-green);
     border-radius: 8px;
     font-size: 19px;
     color: black;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 4s;
+}
+
+.btn-box a:hover {
+    color: var(--light-sea-green); 
+} 
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: var(--light-sea-green);
+}
+
+.btn-box a:nth-child(2):hover{
+    color: var(--gunmetal);
+}
+
+.btn-box a:nth-child(2)::before{
+    background: var(--light-sea-green);
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; 
+    height: 100%;
+    background: var(--gunmetal); 
+    z-index: -1;
+    transition: 0.5s ease; 
+}
+
+.btn-box a:hover::before {
+    width: 100%; 
+}
+
+.btn-box a {
+    position: relative; 
+    overflow: hidden; 
+    color: var(--gunmetal); 
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--light-sea-green);
+    border-radius: 25%;
+    font-size: 20px;
+    color: var(--light-sea-green);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.home-sci a:hover{
+    color: var(--gunmetal);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--light-sea-green);
+    z-index: -1;
+    transition: .4s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 50%; 
+    right: 5%; 
+    transform: translateY(-50%); 
+    width: 510px; 
+    height: 445px; 
+    background: transparent;
+    transition: 2s;
+}
+
+.home-imgHover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gunmetal);
+    animation: showRight 1s ease forwards;
+    animation-delay: .3s;
+    z-index: 100;
+}
+
+.home-imgHover:hover {
+    background: var(--gunmetal);
+    opacity: .8;
+}
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes showRight{
+    100% {
+        width: 0;
+    }
 }

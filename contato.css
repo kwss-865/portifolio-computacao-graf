@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,10 +12,9 @@
     --light-sea-green: #00a9a5ff;
 }
 
-body{
+body {
     color: aliceblue;
     background-color: var(--gunmetal);
-
 }
 
 .header {
@@ -31,7 +29,7 @@ body{
     z-index: 100;
 }
 
-.logo{
+.logo {
     position: relative;
     font-size: 25px;
     color: aliceblue;
@@ -39,9 +37,7 @@ body{
     font-weight: 600;
 }
 
-
-
-.navbar a{
+.navbar a {
     font-size: 18px;
     color: aliceblue;
     text-decoration: none;
@@ -53,7 +49,6 @@ body{
 .navbar a:hover,
 .navbar a.active {
     color: var(--light-sea-green);
-
 }
 
 .home {
@@ -66,9 +61,16 @@ body{
     padding: 0 10%;
 }
 
+span{
+    color: var(--light-sea-green);
+}
+
+
 .home-content {
     background: transparent;
     max-width: 600px;
+    margin-right: 20px;
+    height: 400px;
 }
 
 .home-content h1 {
@@ -79,87 +81,40 @@ body{
 }
 
 
-.home-content h3{
+p{
     position: relative;
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--light-sea-green);
-}
-
-
-.home-content p{
-    position: relative;
-    font-size: 17px;
+    font-size: 18px;
     margin: 20px 0 40px;
 }
 
-
-.home-content .btn-box {
-    display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
+.contact-container{
+    border-radius: 10%;
+    border: 5px solid var(--light-sea-green);
+    box-shadow: 0 4px 8px rgba(0, 169, 165, 0.5);
+    object-fit: cover;
+    width: 400px;
+    padding: 40px;
 }
 
-
-.btn-box a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: var(--light-sea-green);
-    border: 2px solid var(--light-sea-green);
-    border-radius: 8px;
-    font-size: 19px;
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: 4s;
-}
-
-.btn-box a:hover {
-    color: var(--light-sea-green); 
-} 
-
-.btn-box a:nth-child(2) {
-    background: transparent;
+.contact-container p{
     color: var(--light-sea-green);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.btn-box a:nth-child(2):hover{
-    color: var(--gunmetal);
+.email-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: aliceblue;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.btn-box a:nth-child(2)::before{
-    background: var(--light-sea-green);
+.email-link:hover {
+    color: var(--light-sea-green);
+    text-decoration: underline;
 }
-
-.btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0; 
-    height: 100%;
-    background: var(--gunmetal); 
-    z-index: -1;
-    transition: 0.5s ease; 
-}
-
-.btn-box a:hover::before {
-    width: 100%; 
-}
-
-.btn-box a {
-    position: relative; 
-    overflow: hidden; 
-    color: var(--gunmetal); 
-}
-
 
 .home-imgHover:hover {
     background: var(--gunmetal);
@@ -176,7 +131,6 @@ body{
     background: transparent;
     transition: 2s;
 }
-
 
 .home-sci{
     width: 240px;
@@ -234,12 +188,4 @@ footer {
     text-decoration: none;
     font-size: 1.2rem;
     color: var(--verdinho);
-}
-
-/* KEYFRAMES ANIMATION */
-
-@keyframes showRight{
-    100% {
-        width: 0;
-    }
 }
